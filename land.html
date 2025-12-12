@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Mystery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Happy Birthday Mystery 🎶</h1>
+    <p class="wish">
+      Happy Birthday, Mystry…
+The man, the myth, the legend ... born today.
+Even though I’m almost 2800 km away,you are still the closest person to me.Distance can never change that.
+
+On your birthday, I want only one thing…Whenever you open this page and listen to these songs,
+remember me.
+
+Thank you for everything...for your kindness,your presence,and your voice that feels like music itself.
+
+Please stay with music always…because you truly have a beautiful voice.
+
+
+
+— From Suki
+    </p>
+  </header>
+
+  <!-- Photos Section -->
+  <section class="photos">
+    <h2>Your Gurudev</h2>
+    <div class="photo-grid">
+      
+      <img src="srk1.jpg" alt="">
+      <img src="sonu2.jpg" alt="">
+      <img src="gg.webp" alt="">
+      
+    </div>
+  </section>
+
+  
+
+  <!-- Songs Section -->
+<section class="songs">
+  <h2 class="playlist-title">🎧 Special Playlist For You</h2>
+
+  <div class="song-grid">
+
+    <div class="song-card" onclick="playSong('s6.mpeg')">
+      <img src="N1.jpeg" alt="Song 1">
+      <h3>Mandatory</h3>
+    </div>
+
+    <div class="song-card" onclick="playSong('s1.mp4')">
+      <img src="N2.jpeg" alt="Song 2">
+      <h3>Extraordinary</h3>
+    </div>
+
+    <div class="song-card" onclick="playSong('s3.mp3')">
+      <img src="N3.jpeg" alt="Song 3">
+      <h3>Necessary</h3>
+    </div>
+
+    <div class="song-card" onclick="playSong('s2.mp4')">
+      <img src="N4.jpeg" alt="Song 4">
+      <h3>Reamarkable</h3>
+    </div>
+
+    <div class="song-card" onclick="playSong('s4.mpeg')">
+      <img src="N5.jpeg" alt="Song 5">
+      <h3>favourite</h3>
+    </div>
+
+    <div class="song-card" onclick="playSong('s5.mp4')">
+      <img src="N1.jpeg" alt="Song 6">
+      <h3>Good bye</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- Global Audio Player -->
+<audio id="player" controls class="audio-player"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>

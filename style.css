@@ -1,0 +1,219 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+  background: #0d0d0d;
+}
+
+/* Gradient Background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(-45deg, #180206, #db3d74, #09380c, #ae752f);
+  background-size: 400% 400%;
+  animation: gradient 12s infinite;
+  z-index: -5;
+}
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+/* ---------- PHOTO GRID ---------- */
+
+.photo-grid-section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+
+}
+
+.grid-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* Responsive grid layout */
+.photo-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  
+}
+
+/* Style each photo */
+.photo-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(5px);
+  padding: 5px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect */
+.photo-grid img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.35);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .photo-grid img {
+    height: 160px;
+  }
+}
+
+
+/* Playlist Title */
+.playlist-title {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+/* Song Grid */
+.song-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Song Cards */
+.song-card {
+  width: 150px;
+  background: rgba(255,255,255,0.15);
+  padding: 12px;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+.song-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #ff66ff;
+}
+.song-card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+/* Audio Player */
+.audio-player {
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Floating Hearts */
+#hearts {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.heart {
+  position: absolute;
+  bottom: 0;
+  color: pink;
+  animation: floatUp 3s linear forwards;
+  font-size: 20px;
+}
+@keyframes floatUp {
+  0% {transform: translateY(0) scale(1); opacity: 1;}
+  100% {transform: translateY(-200px) scale(1.5); opacity: 0;}
+}
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .song-grid {
+    gap: 15px;
+  }
+  .song-card {
+    width: 180px;
+  }
+}
+
+/* Large Mobile */
+@media (max-width: 600px) {
+  .playlist-title {
+    font-size: 1.7rem;
+  }
+
+  .song-grid {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    padding: 10px;
+  }
+
+  .song-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .song-card img {
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .audio-player {
+    width: 95%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 420px) {
+
+  .playlist-title {
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+
+  .song-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .song-card {
+    width: 88%;
+    margin: auto;
+    padding: 12px;
+  }
+
+  .song-card img {
+    height: 150px;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  body {
+    padding-bottom: 50px;
+  }
+}
+
+/* Ultra Small Screens */
+@media (max-width: 330px) {
+  .song-card img {
+    height: 130px;
+  }
+  .playlist-title {
+    font-size: 1.2rem;
+  }
+}
